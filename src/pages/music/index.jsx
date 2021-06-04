@@ -3,7 +3,6 @@ import { withRouter } from "react-router-dom"
 import { Button } from "zarm"
 import MyIcon from "@/components/icon"
 import styled from "styled-components"
-// import Audio from "@/components/audio/index2"
 import Audio from "@/components/audio"
 import bgimg from '@/components/audio/player-bg.jpg'
 
@@ -29,8 +28,7 @@ const Music = (props) => {
     const gohome = () => {
         props.history.push('/home')
     }
-    const streamUrl = 'http://120.76.63.188:3001/components/audio/qingtian.mp3';
-    const trackTitle = '晴天'
+    
     return (
         <Container>
             <p>
@@ -39,15 +37,7 @@ const Music = (props) => {
                 </Button>
             </p>
             <div className="audio">
-                <Audio
-                   streamUrl={streamUrl}
-                   trackTitle={trackTitle} 
-                   preloadType="auto"
-                />
-                {/* <Audio
-                 src={streamUrl}
-                 title={trackTitle}
-                /> */}
+                <Audio />
             </div>
             
 

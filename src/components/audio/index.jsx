@@ -1,48 +1,62 @@
-import React from 'react';
-import { PlayButton, Timer} from 'react-soundplayer/components';
-import { withCustomAudio } from 'react-soundplayer/addons';
+import React, { Component } from 'react'
+
+import Audio2 from './audio2'
+
 import styled from "styled-components"
+import Visualizer from './api.js'
 const Style = styled.div`
-  .container{
-        position: relative;
-        top:70vh;
-        padding-left:30px;
-        color:black;
-        display:flex;
-        .sb-soundplayer-btn{
-            width:50px;
-            height:50px;
-            margin-right:10px;
+    width:100vw;
+    height:90vh;
+    color: #FEFEFE;
+    #fileWrapper {
+        transition: all 0.5s ease;
+        padding-left:40px;
+    }
 
-        }
-        .title{
-            margin-bottom:6px;
-            
-        }
-        .sb-soundplayer-timer{
+    #fileWrapper:hover {
+        opacity: 1 !important;
+    }
 
-        }
-  }
+    #visualizer_wrapper {
+        padding-top:10px;
+        text-align: center;
+    }
+    #canvas{
+        width:80vw;
+        height:50vh;
+    }
 
-  
 `
-const Audio = withCustomAudio(props => {
-  const { trackTitle } = props;
-  return (
-    <Style>
-      <div className="container">
-        <PlayButton {...props} />
-        <div>
-          <h2 className="title">{trackTitle}</h2>
-          
-          <Timer {...props} />
-        </div>
-        
-
-      </div>
-
-    </Style>
-  );
-});
+const streamUrl = 'http://120.76.63.188:3001/components/audio/qingtian.mp3';
+const trackTitle = '晴天'
+class Audio extends Component {
+    render() {
+        return (
+            <Style>
+                <div id="wrapper">
+                    <div id="fileWrapper" className="file_wrapper">
+                        <div id="info">
+                            HTML5 Audio API 案例
+                        </div>
+                        <label htmlFor="uploadedFile">拖拽/选择一个文件进行播放:</label>
+                        <input type="file" id="uploadedFile"></input>
+                    </div>
+                    <div id="visualizer_wrapper">
+                        <canvas id='canvas'></canvas>
+                    </div>
+                </div>
+                <Audio2 
+                    streamUrl={streamUrl}
+                    trackTitle={trackTitle} 
+                    preloadType="auto"
+                />
+            </Style>
+        );
+    }
+    componentDidMount() {
+        new Visualizer().ini()
+    }
+}
 
 export default Audio;
+

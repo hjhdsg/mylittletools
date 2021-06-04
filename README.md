@@ -21,6 +21,8 @@ npm i  axios react-router-dom react-redux redux-thunk react-transition-group red
 
 ## 7 功能
 
++ Canvas标签与AudioContext对象可以轻松实现可视化频谱效果
+
 + react-transition-group
     + 动画
 
