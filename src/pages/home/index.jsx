@@ -23,11 +23,12 @@ const Home1 = styled.div`
 `
 const { createAction } = actions
 const imgList = [
-    'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F41f541c18702a62f8a21c0199025562ceda892cd10eaed-xEwW58_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625329373&t=ca69ebfea0e13d265c567b0cd7218fdf',
-    'https://img-blog.csdnimg.cn/20210516133843421.gif',
-    'https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190409%2Ff00c33b200d84bdba678e3000671043c.gif&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625329446&t=92c6e0fb76608bff228ec12a36da64b9',
-    'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_match%2F0%2F9534638962%2F0.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625310482&t=6d840640b9dd3335409e9ff2733a42fb',
-    'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01c8f2593224fba8012193a347f0a6.gif&refer=http%3A%2F%2Fimg.zcool.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625383946&t=d15b95840b87c0f8a1d759e9e239820c',]
+    'https://i.pinimg.com/originals/7f/11/23/7f11238c3e79ea4deaad67b7b70921f9.gif',
+    'https://i.pinimg.com/originals/7f/11/23/7f11238c3e79ea4deaad67b7b70921f9.gif',
+    'https://i.pinimg.com/originals/7f/11/23/7f11238c3e79ea4deaad67b7b70921f9.gif',
+    'https://i.pinimg.com/originals/7f/11/23/7f11238c3e79ea4deaad67b7b70921f9.gif',
+    'https://i.pinimg.com/originals/7f/11/23/7f11238c3e79ea4deaad67b7b70921f9.gif',
+]
 class Home extends Component  {
     state = {
         // 背景图片路径
@@ -36,7 +37,7 @@ class Home extends Component  {
     render() {
         // console.log("切换为",this.props.location.state)
         const { currentcity, todaydata, chartdata, forecast } = this.props
-        const url = this.state.bgimg ? this.state.bgimg : "https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20180314%2F0de196c858eb47e5b0780a89ef7b5362.gif&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625359723&t=9f3e40afc392a7bde9672d4dda83e148"
+        const url = this.state.bgimg ? this.state.bgimg : "https://i.pinimg.com/originals/7f/11/23/7f11238c3e79ea4deaad67b7b70921f9.gif"
         const img = {
             backgroundImage: `url('${url}')`
         }

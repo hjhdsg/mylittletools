@@ -27,7 +27,7 @@ const Style = styled.div`
     }
 
 `
-const streamUrl = 'http://120.76.63.188:3001/components/audio/qingtian.mp3';
+const streamUrl = 'http://47.243.137.96:3001/qingtian.mp3';
 const trackTitle = '晴天'
 class Audio extends Component {
     render() {
